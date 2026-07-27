@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuele | Founder & Digital Artist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Space+Mono:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Nuele</div>
+        <div class="nav-links">
+            <a href="#builds">provenance</a>
+            <a href="#connect">subscribe</a>
+            <a href="#connect">connect</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-archetype">
+            <div class="archetype-container">
+                <img src="nu1l.png" alt="Nuel - Founder" class="profile-crop">
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <p>Scroll</p>
+            <div class="mouse"></div>
+        </div>
+    </header>
+
+    <section id="builds" class="timeline-section">
+        <div class="section-header reveal">
+            <h2 class="serif-title">provenance</h2>
+            <h1 class="main-headline">Architecting sovereign intellectual property. Designing the worlds that sustain it.</h1>
+            <p class="sub-headline">Bridging high-end digital art with scalable contract infrastructure across Monad, Base, Ethereum, Bitcoin, and Solana.</p>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-item reveal">
+                <div class="timeline-meta">
+                    <span class="number">01</span>
+                    <span class="date mono-text">2023 - 2024</span>
+                </div>
+                <div class="timeline-content">
+                    <p>Roots in graphic and web design paved the way into the digital asset space. Early days navigating chain ecosystems evolved into a disciplined approach to professional trading across FX, commodities, and equities. Beyond the charts, the true alpha was found in community,forging connections with builders and understanding the underlying culture of decentralized networks.</p>
+                    <div class="execution-block mono-text">
+                        <span>market execution.</span><br>
+                        <span>network expansion.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item reveal">
+                <div class="timeline-meta">
+                    <span class="number">02</span>
+                    <span class="date mono-text">2025</span>
+                </div>
+                <div class="timeline-content">
+                    <p>A deliberate shift from participant to architect. Focus narrowed on engineering smart contracts and refining high-end vector design. This period was dedicated to laying the foundational infrastructure required to launch, distribute, and sustain authentic intellectual property on-chain.</p>
+                    <div class="execution-block mono-text">
+                        <span>contract logic deployed.</span><br>
+                        <span>design language solidified.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item reveal">
+                <div class="timeline-meta">
+                    <span class="number">03</span>
+                    <span class="date mono-text">2026</span>
+                </div>
+                <div class="timeline-content">
+                    <p>The convergence of engineering and visual identity. Void Busts a 1,111-piece collection on the Solana network serves as the inaugural launch. This marks the beginning of a broader initiative to build enduring IPs at the intersection of culture, brutalist geometry, and sovereign infrastructure.</p>
+                    <div class="execution-block mono-text">
+                        <span>void busts deployed.</span><br>
+                        <span>sovereign ip established.</span>
+                    </div>
+                    
+                    <div class="media-container">
+                        <video 
+                            autoplay 
+                            loop 
+                            muted 
+                            playsinline 
+                            poster="1.png" 
+                            class="timeline-video">
+                            <source src="your-animation.mp4" type="video/mp4">
+                        </video>
+                        <div class="media-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="connect" class="connect-section reveal">
+        <div class="connect-box">
+            <h2 class="serif-title">the early signal</h2>
+            <p>Join the network for early updates on new cryptographic art drops, IP developments, and infrastructure deployments.</p>
+            <form class="subscribe-form" action="https://formspree.io/f/mpqvkknv" method="POST">
+                <input type="email" name="email" placeholder="enter your email..." required>
+                <button type="submit">subscribe →</button>
+            </form>
+        </div>
+        
+        <div class="social-links mono-text">
+            <span>x: @Nue1e</span>
+            <span>github: /Nuele</span>
+            <span>telegram: @Nue1e</span>
+        </div>
+    </section>
+
+    <footer>
+        <p class="mono-text">&copy; 2026 Nuele. all rights reserved.</p>
+    </footer>
+
+    <script>
+        const reveals = document.querySelectorAll('.reveal');
+        
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15 
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); 
+                }
+            });
+        }, observerOptions);
+
+        reveals.forEach(reveal => {
+            observer.observe(reveal);
+        });
+    </script>
+</body>
+</html>
